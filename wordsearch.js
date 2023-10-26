@@ -9,9 +9,9 @@ const wordSearch = (letters, word) => {
   }
 
   const result = vertical(letters);
-  const verticalJoin = result.map(ls => ls.join(''));
+  const verticalJoin = result.map(ls => ls.join('')); // joining array values without space
   for (let l of verticalJoin) {
-    if (l.includes(word)) return true;
+    if (l.includes(word)) return true; //checking the given word present in each row
   }
   return false;
 };
